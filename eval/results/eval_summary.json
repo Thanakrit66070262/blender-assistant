@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "total_cases": 30,
+    "retrieval_hit_rate": "40.00%",
+    "syntax_pass_rate": "100.00%",
+    "api_match_rate": "80.00%",
+    "failures_count": 18
+  },
+  "failures": [
+    {
+      "id": "bpy_05",
+      "query": "How to create an empty plane mesh object from scratch without primitives using bpy.data?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\nimport bmesh\n\n# Deselect all objects\nbpy.ops.object.select_all(action='DESELECT')\n\n# Create a new object\nmesh"
+    },
+    {
+      "id": "bpy_06",
+      "query": "How to translate the currently active object by 3 units on the X axis using bpy.ops?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": false,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure an object is active\nif bpy.context.active_object and bpy.context.active_object.type == 'MESH':\n    "
+    },
+    {
+      "id": "bpy_07",
+      "query": "Rotate the selected object 90 degrees around the Z axis via direct object rotation property.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure an object is selected\nif bpy.context.active_object and bpy.context.active_object.type == 'MESH':\n  "
+    },
+    {
+      "id": "bpy_10",
+      "query": "How to set the 3D cursor location to (0, 0, 0) via Python?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Set the 3D cursor location to (0, 0, 0)\nbpy.context.scene.cursor.location = (0.0, 0.0, 0.0)"
+    },
+    {
+      "id": "bpy_13",
+      "query": "Select an object named 'MyCube' and make it the active object.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\nobj_name = 'MyCube'\n\nif obj_name in bpy.data.objects:\n    obj = bpy.data.objects[obj_name]\n    bpy.context.v"
+    },
+    {
+      "id": "bpy_14",
+      "query": "How to parent object 'ChildObj' to object 'ParentObj' using Python code?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure both objects exist in the scene\nif 'ChildObj' in bpy.data.objects and 'ParentObj' in bpy.data.objec"
+    },
+    {
+      "id": "bpy_15",
+      "query": "Duplicate the active object and keep it linked to the same mesh data block.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure an object is selected\nif not bpy.context.active_object or bpy.context.active_object.type != 'MESH':"
+    },
+    {
+      "id": "bpy_16",
+      "query": "How to switch the active object into Edit Mode using bpy.ops?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure an object is selected before attempting to switch modes\nif bpy.context.active_object and bpy.contex"
+    },
+    {
+      "id": "bpy_17",
+      "query": "Subdivide all selected faces once in Edit Mode.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": false,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure we are in object mode first, although the operation is usually performed in edit mode\nif bpy.contex"
+    },
+    {
+      "id": "bpy_18",
+      "query": "How to extrude selected region along the normals in Edit Mode?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": false,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure we are in Object Mode first, although the operation is typically run in Edit Mode\nif bpy.context.ob"
+    },
+    {
+      "id": "bpy_21",
+      "query": "Create a new material named 'RedMat' and enable node-based shading.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure we are in object mode to manipulate materials on an object\nif bpy.context.object and bpy.context.ob"
+    },
+    {
+      "id": "bpy_22",
+      "query": "Assign an existing material named 'RedMat' to the active object's material slots.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": false,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Check if there is an active object\nif bpy.context.active_object is None:\n    print(\"Error: No active objec"
+    },
+    {
+      "id": "bpy_23",
+      "query": "Change the Base Color of the Principled BSDF node on material 'RedMat' to pure red (1, 0, 0, 1).",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\nmaterial_name = 'RedMat'\ntarget_color = (1.0, 0.0, 0.0, 1.0)  # Pure red (R, G, B, A)\n\n# Find the material\nm"
+    },
+    {
+      "id": "bpy_24",
+      "query": "How to set the Metallic value of a Principled BSDF node to 1.0 via script?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Assuming you have a material assigned to an object and you want to modify the Principled BSDF node\n# This "
+    },
+    {
+      "id": "bpy_25",
+      "query": "Add a Subdivision Surface modifier named 'Subsurf' to the active object and set render levels to 2.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": false,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure an object is active\nif bpy.context.active_object is None:\n    print(\"Error: No active object select"
+    },
+    {
+      "id": "bpy_26",
+      "query": "How to add a Bevel modifier to the active object with an amount of 0.05?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": false,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure an object is active and is a mesh\nif bpy.context.active_object and bpy.context.active_object.type ="
+    },
+    {
+      "id": "bpy_28",
+      "query": "How to insert a keyframe for location at frame 1 on the active object?",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Ensure an object is active\nif bpy.context.active_object is None:\n    print(\"Error: No active object select"
+    },
+    {
+      "id": "bpy_30",
+      "query": "Set the scene render output resolution to 1920x1080 and render percentage to 100%.",
+      "retrieval_hit": false,
+      "syntax_valid": true,
+      "api_match": true,
+      "error": null,
+      "code_snippet": "import bpy\n\n# Get the scene's render settings\nscene = bpy.context.scene.render\n\n# Set the render output resolution to 19"
+    }
+  ]
+}
