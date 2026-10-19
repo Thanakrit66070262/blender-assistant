@@ -1,0 +1,212 @@
+[
+  {
+    "id": "bpy_01",
+    "query": "How to create a UV sphere at position (0, 0, 5) using bpy.ops?",
+    "ground_truth_doc_id": "bpy.ops.mesh.primitive_uv_sphere_add",
+    "expected_apis": ["bpy.ops.mesh.primitive_uv_sphere_add"],
+    "category": "mesh_creation"
+  },
+  {
+    "id": "bpy_02",
+    "query": "Write a script to add a cube with a size of 2 meters at the scene origin.",
+    "ground_truth_doc_id": "bpy.ops.mesh.primitive_cube_add",
+    "expected_apis": ["bpy.ops.mesh.primitive_cube_add"],
+    "category": "mesh_creation"
+  },
+  {
+    "id": "bpy_03",
+    "query": "How to add a cylinder with 16 vertices and radius of 0.5 via Python?",
+    "ground_truth_doc_id": "bpy.ops.mesh.primitive_cylinder_add",
+    "expected_apis": ["bpy.ops.mesh.primitive_cylinder_add"],
+    "category": "mesh_creation"
+  },
+  {
+    "id": "bpy_04",
+    "query": "Create a monkey primitive (Suzanne) located at (2, 0, 0).",
+    "ground_truth_doc_id": "bpy.ops.mesh.primitive_monkey_add",
+    "expected_apis": ["bpy.ops.mesh.primitive_monkey_add"],
+    "category": "mesh_creation"
+  },
+  {
+    "id": "bpy_05",
+    "query": "How to create an empty plane mesh object from scratch without primitives using bpy.data?",
+    "ground_truth_doc_id": "bpy.data.meshes.new",
+    "expected_apis": ["bpy.data.meshes.new", "bpy.data.objects.new"],
+    "category": "mesh_creation"
+  },
+  {
+    "id": "bpy_06",
+    "query": "How to translate the currently active object by 3 units on the X axis using bpy.ops?",
+    "ground_truth_doc_id": "bpy.ops.transform.translate",
+    "expected_apis": ["bpy.ops.transform.translate"],
+    "category": "transforms"
+  },
+  {
+    "id": "bpy_07",
+    "query": "Rotate the selected object 90 degrees around the Z axis via direct object rotation property.",
+    "ground_truth_doc_id": "bpy.types.Object.rotation_euler",
+    "expected_apis": ["rotation_euler"],
+    "category": "transforms"
+  },
+  {
+    "id": "bpy_08",
+    "query": "How to set the scale of the active object to (2.0, 2.0, 2.0) directly?",
+    "ground_truth_doc_id": "bpy.types.Object.scale",
+    "expected_apis": ["scale"],
+    "category": "transforms"
+  },
+  {
+    "id": "bpy_09",
+    "query": "Apply all location, rotation, and scale transforms on the active object.",
+    "ground_truth_doc_id": "bpy.ops.object.transform_apply",
+    "expected_apis": ["bpy.ops.object.transform_apply"],
+    "category": "transforms"
+  },
+  {
+    "id": "bpy_10",
+    "query": "How to set the 3D cursor location to (0, 0, 0) via Python?",
+    "ground_truth_doc_id": "bpy.types.Scene.cursor",
+    "expected_apis": ["bpy.context.scene.cursor.location"],
+    "category": "transforms"
+  },
+  {
+    "id": "bpy_11",
+    "query": "Deselect all objects in the current 3D viewport using bpy.ops.",
+    "ground_truth_doc_id": "bpy.ops.object.select_all",
+    "expected_apis": ["bpy.ops.object.select_all"],
+    "category": "selection_hierarchy"
+  },
+  {
+    "id": "bpy_12",
+    "query": "How to delete all selected objects in the scene?",
+    "ground_truth_doc_id": "bpy.ops.object.delete",
+    "expected_apis": ["bpy.ops.object.delete"],
+    "category": "selection_hierarchy"
+  },
+  {
+    "id": "bpy_13",
+    "query": "Select an object named 'MyCube' and make it the active object.",
+    "ground_truth_doc_id": "bpy.types.LayerObjects.active",
+    "expected_apis": ["bpy.context.view_layer.objects.active", "select_set"],
+    "category": "selection_hierarchy"
+  },
+  {
+    "id": "bpy_14",
+    "query": "How to parent object 'ChildObj' to object 'ParentObj' using Python code?",
+    "ground_truth_doc_id": "bpy.types.Object.parent",
+    "expected_apis": [".parent"],
+    "category": "selection_hierarchy"
+  },
+  {
+    "id": "bpy_15",
+    "query": "Duplicate the active object and keep it linked to the same mesh data block.",
+    "ground_truth_doc_id": "bpy.ops.object.duplicate",
+    "expected_apis": ["bpy.ops.object.duplicate"],
+    "category": "selection_hierarchy"
+  },
+  {
+    "id": "bpy_16",
+    "query": "How to switch the active object into Edit Mode using bpy.ops?",
+    "ground_truth_doc_id": "bpy.ops.object.mode_set",
+    "expected_apis": ["bpy.ops.object.mode_set"],
+    "category": "edit_mode"
+  },
+  {
+    "id": "bpy_17",
+    "query": "Subdivide all selected faces once in Edit Mode.",
+    "ground_truth_doc_id": "bpy.ops.mesh.subdivide",
+    "expected_apis": ["bpy.ops.mesh.subdivide"],
+    "category": "edit_mode"
+  },
+  {
+    "id": "bpy_18",
+    "query": "How to extrude selected region along the normals in Edit Mode?",
+    "ground_truth_doc_id": "bpy.ops.mesh.extrude_region_move",
+    "expected_apis": ["bpy.ops.mesh.extrude_region_move"],
+    "category": "edit_mode"
+  },
+  {
+    "id": "bpy_19",
+    "query": "Remove duplicate vertices (merge by distance) of the active mesh in Edit Mode.",
+    "ground_truth_doc_id": "bpy.ops.mesh.remove_doubles",
+    "expected_apis": ["bpy.ops.mesh.remove_doubles"],
+    "category": "edit_mode"
+  },
+  {
+    "id": "bpy_20",
+    "query": "Select all non-manifold geometry in Edit Mode via bpy.ops.",
+    "ground_truth_doc_id": "bpy.ops.mesh.select_non_manifold",
+    "expected_apis": ["bpy.ops.mesh.select_non_manifold"],
+    "category": "edit_mode"
+  },
+  {
+    "id": "bpy_21",
+    "query": "Create a new material named 'RedMat' and enable node-based shading.",
+    "ground_truth_doc_id": "bpy.data.materials.new",
+    "expected_apis": ["bpy.data.materials.new", "use_nodes"],
+    "category": "materials"
+  },
+  {
+    "id": "bpy_22",
+    "query": "Assign an existing material named 'RedMat' to the active object's material slots.",
+    "ground_truth_doc_id": "bpy.types.Object.data.materials.append",
+    "expected_apis": ["data.materials.append"],
+    "category": "materials"
+  },
+  {
+    "id": "bpy_23",
+    "query": "Change the Base Color of the Principled BSDF node on material 'RedMat' to pure red (1, 0, 0, 1).",
+    "ground_truth_doc_id": "bpy.types.ShaderNodeBsdfPrincipled",
+    "expected_apis": ["node_tree.nodes", "Base Color"],
+    "category": "materials"
+  },
+  {
+    "id": "bpy_24",
+    "query": "How to set the Metallic value of a Principled BSDF node to 1.0 via script?",
+    "ground_truth_doc_id": "bpy.types.ShaderNodeBsdfPrincipled",
+    "expected_apis": ["Metallic", "default_value"],
+    "category": "materials"
+  },
+  {
+    "id": "bpy_25",
+    "query": "Add a Subdivision Surface modifier named 'Subsurf' to the active object and set render levels to 2.",
+    "ground_truth_doc_id": "bpy.types.ObjectModifiers.new",
+    "expected_apis": ["modifiers.new", "SUBSURF"],
+    "category": "modifiers"
+  },
+  {
+    "id": "bpy_26",
+    "query": "How to add a Bevel modifier to the active object with an amount of 0.05?",
+    "ground_truth_doc_id": "bpy.types.ObjectModifiers.new",
+    "expected_apis": ["modifiers.new", "BEVEL"],
+    "category": "modifiers"
+  },
+  {
+    "id": "bpy_27",
+    "query": "Apply a modifier named 'Subsurf' on the active object using bpy.ops.",
+    "ground_truth_doc_id": "bpy.ops.object.modifier_apply",
+    "expected_apis": ["bpy.ops.object.modifier_apply"],
+    "category": "modifiers"
+  },
+  {
+    "id": "bpy_28",
+    "query": "How to insert a keyframe for location at frame 1 on the active object?",
+    "ground_truth_doc_id": "bpy.types.Object.keyframe_insert",
+    "expected_apis": ["keyframe_insert", "data_path"],
+    "category": "animation"
+  },
+  {
+    "id": "bpy_29",
+    "query": "Set the current scene playback frame to frame 50 using Python.",
+    "ground_truth_doc_id": "bpy.types.Scene.frame_set",
+    "expected_apis": ["bpy.context.scene.frame_set"],
+    "category": "animation"
+  },
+  {
+    "id": "bpy_30",
+    "query": "Set the scene render output resolution to 1920x1080 and render percentage to 100%.",
+    "ground_truth_doc_id": "bpy.types.RenderSettings",
+    "expected_apis": ["resolution_x", "resolution_y", "resolution_percentage"],
+    "category": "scene_render"
+  }
+]

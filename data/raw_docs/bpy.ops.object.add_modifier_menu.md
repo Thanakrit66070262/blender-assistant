@@ -1,0 +1,13 @@
+# bpy.ops.object.add_modifier_menu
+
+## Signature
+```python
+bpy.ops.object.add_modifier_menu()Â
+Description
+Undocumented, consider contributing.
+Returns:
+Result of the operator call.
+Return type:
+set[Literal[Operator Return Items]]
+File:
+startup/bl_ui/properties_data_modifier.py:303
