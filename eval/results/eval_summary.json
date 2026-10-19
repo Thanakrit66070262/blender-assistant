@@ -3,7 +3,7 @@
     "total_cases": 30,
     "retrieval_hit_rate": "40.00%",
     "syntax_pass_rate": "100.00%",
-    "api_match_rate": "80.00%",
+    "api_match_rate": "83.33%",
     "failures_count": 18
   },
   "failures": [
@@ -59,7 +59,7 @@
       "syntax_valid": true,
       "api_match": true,
       "error": null,
-      "code_snippet": "import bpy\n\n# Ensure both objects exist in the scene\nif 'ChildObj' in bpy.data.objects and 'ParentObj' in bpy.data.objec"
+      "code_snippet": "import bpy\n\n# Ensure objects exist and are selected/active if necessary for the operator to work reliably\n# For this exa"
     },
     {
       "id": "bpy_15",
@@ -111,7 +111,7 @@
       "query": "Assign an existing material named 'RedMat' to the active object's material slots.",
       "retrieval_hit": false,
       "syntax_valid": true,
-      "api_match": false,
+      "api_match": true,
       "error": null,
       "code_snippet": "import bpy\n\n# Check if there is an active object\nif bpy.context.active_object is None:\n    print(\"Error: No active objec"
     },
@@ -140,7 +140,7 @@
       "syntax_valid": true,
       "api_match": false,
       "error": null,
-      "code_snippet": "import bpy\n\n# Ensure an object is active\nif bpy.context.active_object is None:\n    print(\"Error: No active object select"
+      "code_snippet": "import bpy\n\n# Ensure an object is active\nif bpy.context.active_object is None or bpy.context.active_object.type != 'MESH"
     },
     {
       "id": "bpy_26",
@@ -167,7 +167,7 @@
       "syntax_valid": true,
       "api_match": true,
       "error": null,
-      "code_snippet": "import bpy\n\n# Get the scene's render settings\nscene = bpy.context.scene.render\n\n# Set the render output resolution to 19"
+      "code_snippet": "import bpy\n\n# Get the scene's render settings\nscene = bpy.context.scene\n\n# Set the render output resolution to 1920x1080"
     }
   ]
 }

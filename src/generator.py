@@ -1,15 +1,26 @@
-# src/generator.py
+# src/generator.py ด้านบนสุด
 import json
+import os
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
-from pydantic import ValidationError
-from schemas import BpyScriptResponse
 
-env_path = Path(__file__).resolve().parent.parent / ".env"
-load_dotenv(dotenv_path=env_path)
-# เรียก OpenAI() ว่างๆ ตามมาตรฐานคลาส ซึ่งจะอ่าน OPENAI_BASE_URL และ OPENAI_API_KEY
-# จาก Environment Variables ให้อัตโนมัติ (เช่น ตอนรันผ่าน uv run --env-file .env หรือเซ็ต env ไว้)
+# 1. จัดการ Path ให้มองเห็นโฟลเดอร์ src เสมอ
+src_dir = Path(__file__).resolve().parent
+if str(src_dir) not in sys.path:
+    sys.path.insert(0, str(src_dir))
+
+# 2. โหลด .env จาก root
+root_dir = src_dir.parent
+load_dotenv(dotenv_path=root_dir / ".env")
+
+# 3. Import schemas (ใช้ try-except เพื่อรองรับทั้งสองแบบ)
+try:
+    from schemas import BpyScriptResponse
+except ModuleNotFoundError:
+    from src.schemas import BpyScriptResponse
+
 client = OpenAI()
 
 def generate_bpy_solution(query: str, retrieved_chunks: list) -> BpyScriptResponse:
