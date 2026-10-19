@@ -1,0 +1,29 @@
+# 1. Credentials & Secrets (ห้ามหลุดเด็ดขาดตามเกณฑ์ข้อ 1)
+.env
+.env.*
+*.key
+*.pem
+
+# 2. Python Environment & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+
+# 3. Vector Embeddings Cache & Large Temp Files
+# (เก็บ raw data และ eval_set ไว้ แต่แคชเวกเตอร์สร้างใหม่จากสคริปต์ได้)
+data/*.npz
+data/vector_store.npz
+
+# 4. OS & IDE Specific Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 5. Evaluation Logs (ถ้าต้องการเก็บเป็นสรุป แต่ไม่เอา temp logs)
+eval/results/*.log
